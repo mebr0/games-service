@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package game;
+
+option go_package = "pkg/api/v1";
+
+message Game {
+  int32 id = 1;
+  string team_1 = 2;
+  string team_2 = 3;
+  int32 score_team_1 = 4;
+  int32 score_team_2 = 5;
+}
+
+message Response {
+  string message = 1;
+}
+
+service GameService {
+  rpc Send(Game) returns (Response) {}
+}

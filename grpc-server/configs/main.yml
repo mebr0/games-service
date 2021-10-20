@@ -1,0 +1,4 @@
+grpc:
+  port: 9000
+ws:
+  host: localhost:8080
